@@ -1,0 +1,1 @@
+    MICRIUM_UCOS3_Initialize();
