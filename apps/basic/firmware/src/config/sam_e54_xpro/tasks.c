@@ -122,7 +122,7 @@ void SYS_Tasks ( void )
 
     /* Start RTOS Scheduler. */
         /**************
-     * Start RTOS * 
+     * Start RTOS *
      **************/
     OSStart(&os_err); /* This function never returns. */
 

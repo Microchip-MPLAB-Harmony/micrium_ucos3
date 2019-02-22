@@ -3,7 +3,7 @@
 *                                              uC/OS-III
 *                                        The Real-Time Kernel
 *
-*                          (c) Copyright 2004-2010; Micrium, Inc.; Weston, FL               
+*                          (c) Copyright 2004-2010; Micrium, Inc.; Weston, FL
 *
 *               All rights reserved.  Protected by international copyright laws.
 *********************************************************************************************************
