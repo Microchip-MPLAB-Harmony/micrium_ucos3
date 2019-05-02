@@ -53,6 +53,7 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "os.h"
+#include "peripheral/efc/plib_efc.h"
 #include "app.h"
 
 
