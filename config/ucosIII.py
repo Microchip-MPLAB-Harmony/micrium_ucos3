@@ -41,13 +41,13 @@ def micriumSymbolViibility(symbol, event):
         symbol.setVisible(False)
 
 def deactivateActiveRtos():
-    componentIDTable = ["bootloadable"]
-
     activeComponents = Database.getActiveComponentIDs()
 
     for i in range(0, len(activeComponents)):
         if (activeComponents[i] == "FreeRTOS"):
             res = Database.deactivateComponents(["FreeRTOS"])
+        if (activeComponents[i] == "ThreadX"):
+            res = Database.deactivateComponents(["ThreadX"])
 
 # Instatntiate Micrium OS III Component
 def instantiateComponent(thirdPartyMicriumOSIII):
