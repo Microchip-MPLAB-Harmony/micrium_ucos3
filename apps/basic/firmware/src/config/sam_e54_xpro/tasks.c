@@ -53,6 +53,7 @@
 #include "configuration.h"
 #include "definitions.h"
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: RTOS "Tasks" Routine
@@ -60,7 +61,7 @@
 // *****************************************************************************
 /* Handle for the APP_Tasks. */
 OS_TCB  _APP_Tasks_TCB;
-CPU_STK _APP_TasksStk[1024];
+CPU_STK _APP_TasksStk[4096];
 
 void _APP_Tasks(  void *pvParameters  )
 {
@@ -88,7 +89,6 @@ void _APP_Tasks(  void *pvParameters  )
   Remarks:
     See prototype in system/common/sys_module.h.
 */
-
 void SYS_Tasks ( void )
 {
     OS_ERR os_err;
@@ -111,7 +111,7 @@ void SYS_Tasks ( void )
                  (OS_PRIO      )1,
                  (CPU_STK     *)&_APP_TasksStk[0],
                  (CPU_STK_SIZE )0u,
-                 (CPU_STK_SIZE )1024,
+                 (CPU_STK_SIZE )4096,
                  (OS_MSG_QTY   )0u,
                  (OS_TICK      )0u,
                  (void        *)0,
@@ -127,7 +127,6 @@ void SYS_Tasks ( void )
     OSStart(&os_err); /* This function never returns. */
 
 }
-
 
 /*******************************************************************************
  End of File
