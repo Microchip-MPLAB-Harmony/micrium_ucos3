@@ -100,6 +100,7 @@ SYSTEM_OBJECTS sysObj;
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
+
 /*******************************************************************************
   Function:
     void MICRIUM_UCOS3_Initialize ( void )
@@ -144,6 +145,8 @@ void SYS_Initialize ( void* data )
     CLOCK_Initialize();
 
     MICRIUM_UCOS3_Initialize();
+
+
 
 	BSP_Initialize();
     EVSYS_Initialize();
