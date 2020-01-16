@@ -101,14 +101,22 @@ SYSTEM_OBJECTS sysObj;
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
+/*******************************************************************************
+  Function:
+    void  OS_CPU_SysTickInitFreq (CPU_INT32U cpuFrequency)
 
-void  OS_CPU_SysTickInitFreq (void)
+  Summary:
+    Determine nbr SysTick increments and Init uC/OS periodic time src (SysTick).
+
+  Remarks:
+ */
+void  OS_CPU_SysTickInitFreq (CPU_INT32U cpuFrequency)
 {
-	CPU_INT32U  cnts;
+    CPU_INT32U  cnts;
 
-    cnts = 48000000u / (CPU_INT32U)OSCfg_TickRate_Hz;            /* Determine nbr SysTick increments.                    */
+    cnts = cpuFrequency / (CPU_INT32U)OSCfg_TickRate_Hz;        /* Determine nbr SysTick increments. */
 
-	OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick).              */
+    OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick). */
 }
 
 /*******************************************************************************
@@ -126,7 +134,7 @@ void MICRIUM_UCOS3_Initialize( void )
 {
     OS_ERR os_err;
 
-    OS_CPU_SysTickInitFreq();
+    OS_CPU_SysTickInitFreq(48000000);
 
     CPU_Init();
 
@@ -155,6 +163,8 @@ void SYS_Initialize ( void* data )
     CLOCK_Initialize();
 
     MICRIUM_UCOS3_Initialize();
+
+
 
     NVMCTRL_Initialize( );
 
