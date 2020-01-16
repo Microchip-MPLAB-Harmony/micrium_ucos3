@@ -158,7 +158,11 @@
 *********************************************************************************************************
 */
 
+<#if core.CoreArchitecture == "CORTEX-M7" || core.CoreArchitecture == "CORTEX-M4">
 #if 1                                                           /* Configure CPU count leading  zeros bits ...          */
+<#else>
+#if 0                                                           /* Configure CPU count leading  zeros bits ...          */
+</#if>
 #define  CPU_CFG_LEAD_ZEROS_ASM_PRESENT                         /* ... assembly-version (see Note #1a).                 */
 #endif
 
