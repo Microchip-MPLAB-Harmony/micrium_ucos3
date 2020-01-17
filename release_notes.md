@@ -1,6 +1,32 @@
 
 # Microchip MPLAB Harmony configurations and applications for Micrium OS-III Release Notes
-## Release v3.2.0
+## Release v3.1.0
+### NEW FEATURES
+- This release introduces  support for Cortex-M0+ devices
+- Supports **Micrium OS-III Version** - v3.07.03 (not included and must be downloaded separately)
+- **Development kit and demo application support** - The following table provides number of Micrium OS-III demo application available for different development kits.
+
+| Development kits                                                                                                                  | Applications |
+| --------------------------------------------------------------------------------------------------------------------------------- | ---          |
+| [SAM E54 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsame54-xpro)                    |  1           |
+| [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=ATSAME70-XULT)      |  1           |
+| [SAM C21N Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/ATSAMC21N-XPRO)                  |  1           |
+
+### KNOWN ISSUES
+
+None
+
+### DEVELOPMENT TOOLS
+
+* [MPLAB® X IDE v5.3](https://www.microchip.com/mplab/mplab-x-ide)
+* [MPLAB® XC32 C/C++ Compiler v2.30](https://www.microchip.com/mplab/compilers)
+* [IAR Embedded Workbench® for ARM® v8.4 or above](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+* MPLAB® X IDE plug-ins:
+  * MPLAB® Harmony Configurator (MHC) v3.4.1
+
+
+
+## Release v3.0.0
 ### NEW FEATURES
 - **New part support** - This release introduces initial support for [SAM E54](https://www.microchip.com/design-centers/32-bit/sam-32-bit-mcus/sam-e-mcus), [SAM E70](https://www.microchip.com/design-centers/32-bit/sam-32-bit-mcus/sam-e-mcus) families of 32-bit microcontrollers.
 - Supports **Micrium OS-III Version** - v3.07.03 (not included and must be downloaded separately)
